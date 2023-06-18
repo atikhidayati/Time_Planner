@@ -7,7 +7,7 @@
     android:padding="20dp"
     android:orientation="vertical"
     android:paddingLeft="20dp"
-    tools:context="com.example.time_planner.Activity.MainActivity">
+    tools:context="com.example.time_planner.">
 
 
     <FrameLayout
@@ -46,11 +46,11 @@
         </LinearLayout>
 
         <ImageView
+            android:id="@+id/calender"
             android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_height="35dp"
             android:layout_gravity="right|center"
-            android:background="@drawable/twotone_calendar_month_24"
-            android:id="@+id/calender"/>
+            android:background="@drawable/twotone_calendar_month_24"/>
 
     </FrameLayout>
 

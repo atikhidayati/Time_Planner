@@ -28,6 +28,6 @@ public class Splasscreen extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 finish();
             }
-        }, 4000L); //4000 L = 4 detik
+        }, 6000L); //6000 L = 6 detik
     }
 }
