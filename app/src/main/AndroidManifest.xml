@@ -12,13 +12,19 @@
         android:theme="@style/Theme.Time_planner"
         tools:targetApi="31">
         <activity
+            android:name=".activity_aad"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".Splasscreen"
             android:exported="true">
