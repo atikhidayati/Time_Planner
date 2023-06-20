@@ -14,7 +14,7 @@ public interface UserDao {
     List<User> getAll();
 
     @Query(value = "INSERT INTO user (title,`desc`,date,time,even) VALUES(:name,'desc')")
-    void insertAll(String name, String email);
+    void insertAll(String name, String email, String s, String toString, String string);
 
     @Query("UPDATE user SET title=title, 'desc'=`desc` , date=date, time=time, even=even WHERE uid=:uid")
     void update(int uid, String name, String email);
