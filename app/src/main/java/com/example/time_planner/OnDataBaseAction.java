@@ -1,31 +1,32 @@
 package com.example.time_planner;
 
+import android.app.TaskInfo;
+
+import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
 
 import java.util.List;
 
-import kotlinx.coroutines.scheduling.Task;
-
+@Dao
 public interface OnDataBaseAction {
 
     @Query("SELECT * FROM Task")
-    List<Task> getAllTasksList();
+    List<Task> getAllTasklist();
 
-    @Query("DELETE FROM Task")
+    @Query("DELETE FROM Task ")
     void truncateTheList();
 
     @Insert
     void insertDataIntoTaskList(Task task);
 
-    @Query("DELETE FROM Task WHERE taskId = :taskId"
+    @Query("DELETE FROM Task WHERE taskId = :taskId")
     void deleteTaskFromId(int taskId);
 
-    @Query("SELECT * FROM tambahtask WHERE taskId = :taskId")
+    @Query("SELECT * FROM Task WHERE taskId = :taskId")
     Task selectDataFromAnId(int taskId);
 
-    @Query("UPDATE Task SET Kegiatan = Kegiatan, Deskripsi = :Deskripsi, Date = Date, " +
-            "lastAlarm = :taskTime, event = :taskEvent WHERE taskId = :taskId")
+    @Query("UPDATE Task SET Kegiatan=:Kegiatan, Deskripsi=:Deskripsi, Date=:Date, Time = :taskTime, taskId = :taskEvent WHERE taskId = :taskId")
     void updateAnExistingRow(int taskId, String Kegiatan, String Deskripsi,String Date, String taskTime,
                              String taskEvent);
 }
