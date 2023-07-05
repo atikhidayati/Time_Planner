@@ -1,135 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_height="match_parent"
-    android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".AddTaskActivity">
 
-   <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:paddingLeft="20dp"
-       android:paddingRight="20dp"
-       android:paddingTop="30dp"
-       android:paddingBottom="50dp"
-       android:orientation="vertical">
+    <EditText
+        android:id="@+id/edit_text_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan nama tugas" />
 
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_gravity="center_horizontal"
-           android:layout_marginTop="20dp"
-           android:text="Tambah Task"
-           android:textColor="@android:color/black"
-           android:textSize="22sp"
-           tools:ignore="MissingPrefix"/>
+    <EditText
+        android:id="@+id/edit_text_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan deskripsi tugas" />
 
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_gravity="center_horizontal"
-           android:layout_marginTop="10dp"
-           android:text="Lengkapi Task Dibawah Ini"
-           android:textAlignment="center"
-           android:textColor="@android:color/black"
-           android:alpha="0.8"
-           android:textSize="18sp"
-           tools:ignore="MissingPrefix"/>
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="30dp"
-           android:text="Kegiatan"
-           android:layout_marginLeft="3dp"
-           tools:ignore="MissingPrefix"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
 
-       <EditText
-           android:textSize="14sp"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="5dp"
-           android:singleLine="true"
-           android:padding="10dp"
-           android:id="@+id/adddeskripsi"
-           tools:ignore="MissingPrefix" />
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="30dp"
-           android:text="Deskripsi"
-           android:layout_marginLeft="3dp"
-           tools:ignore="MissingPrefix"/>
+        <EditText
+            android:id="@+id/edit_text_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Tanggal" />
 
-       <EditText
-           android:textSize="14sp"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="5dp"
-           android:singleLine="true"
-           android:padding="10dp"
-           android:id="@+id/addNamaKegiatan"
-           tools:ignore="MissingPrefix" />
+        <EditText
+            android:id="@+id/edit_text_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Jam" />
 
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="30dp"
-           android:text="Date"
-           tools:ignore="MissingPrefix" />
+    </LinearLayout>
 
-       <EditText
-           android:textSize="14sp"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="5dp"
-           android:singleLine="true"
-           android:padding="10dp"
-           android:id="@+id/addDate"
-           tools:ignore="MissingPrefix" />
+    <Button
+        android:id="@+id/button_save_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:text="Simpan" />
 
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="30dp"
-           android:text="add Time"
-           tools:ignore="MissingPrefix" />
-
-       <EditText
-           android:textSize="14sp"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="5dp"
-           android:singleLine="true"
-           android:padding="10dp"
-           android:id="@+id/addTime"
-           tools:ignore="MissingPrefix" />
-
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="30dp"
-           android:text="Tambah Event"
-           tools:ignore="MissingPrefix" />
-
-       <EditText
-           android:textSize="14sp"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="5dp"
-           android:singleLine="true"
-           android:padding="10dp"
-           android:id="@+id/addEvent"
-           tools:ignore="MissingPrefix" />
-
-       <Button
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:id="@+id/addTask"
-           android:text="Tambah Task"
-           android:textColor="@color/design_default_color_background"
-           android:layout_marginTop="40dp" />
-
-   </LinearLayout>
-
-</ScrollView>
-
-
+</LinearLayout>
