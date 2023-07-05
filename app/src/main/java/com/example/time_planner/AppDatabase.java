@@ -7,7 +7,7 @@ import androidx.room.InvalidationTracker;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteOpenHelper;
 
-import kotlinx.coroutines.scheduling.Task;
+
 
 
 @Database(entities = {Task.class}, version = 1, exportSchema = false)
